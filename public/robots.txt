@@ -1,0 +1,21 @@
+
+User-agent: *
+Allow: /
+
+# Disallow admin and login paths
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /dashboard/
+
+# Allow specific files
+Allow: /sitemap.xml
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+
+# Sitemap location
+Sitemap: https://steeleco.com.br/sitemap.xml

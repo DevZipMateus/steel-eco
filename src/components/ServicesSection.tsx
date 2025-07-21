@@ -1,106 +1,136 @@
-import { useEffect, useRef } from 'react';
-import { Home, Wrench, Building2, Clipboard, Hammer, Truck } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
-const services = [{
-  title: "Construção Residencial",
-  description: "Construção de casas e apartamentos com qualidade superior, seguindo todas as normas técnicas e de segurança.",
-  icon: Home,
-  delay: 0
-}, {
-  title: "Reformas e Renovações",
-  description: "Reformas completas ou parciais, modernizando seus espaços com eficiência e cuidado.",
-  icon: Wrench,
-  delay: 100
-}, {
-  title: "Obras Comerciais",
-  description: "Construção de edifícios comerciais, escritórios e espaços industriais com tecnologia avançada.",
-  icon: Building2,
-  delay: 200
-}, {
-  title: "Gerenciamento de Obras",
-  description: "Acompanhamento completo do projeto, desde o planejamento até a entrega final da obra.",
-  icon: Clipboard,
-  delay: 300
-}, {
-  title: "Acabamentos",
-  description: "Serviços especializados em acabamentos internos e externos com materiais de primeira qualidade.",
-  icon: Hammer,
-  delay: 400
-}, {
-  title: "Infraestrutura",
-  description: "Obras de infraestrutura urbana, saneamento e obras públicas com experiência comprovada.",
-  icon: Truck,
-  delay: 500
-}];
+import { useEffect, useRef } from 'react';
+import { Building, Wind, Home, Layers, Grid, Hammer } from 'lucide-react';
+
+const services = [
+  {
+    title: "Brises",
+    description: "Constantemente inovando em tecnologias, equipamentos, logística, segurança e treinamento de equipes, a Steel Eco instala produtos para fachadas de edifícios, tendo em seu currículo as maiores e mais importantes obras de Brasília e em todo Brasil.",
+    icon: Wind,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Fachadas",
+    description: "A instalação de fachadas é sempre um desafio vencido pela competência e qualidade de mão de obra altamente especializada. A Steel Eco possui equipamentos de apoio necessários à instalação, reduzindo assim os custos de tempo e de mão de obra.",
+    icon: Building,
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Fachadas Ventiladas",
+    description: "Fachada Ventilada exige estrutura auxiliar perfeita, fidelidade ao projeto e às características do produto, além de mão de obra qualificada e treinada. A Steel Eco oferece técnica, conhecimento, experiência e confiabilidade.",
+    icon: Grid,
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Forros Metálicos",
+    description: "Os Forros Metálicos, cada vez mais usados por sua beleza, leveza, praticidade e mobilidade, assim como os brises e fachadas, exigem mão de obra especializada para garantir a perfeição estética e de funcionalidade.",
+    icon: Layers,
+    image: "https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Forros Fibra Mineral",
+    description: "A Steel Eco acumula a experiência de instalação de milhões de m² de Forro de Fibra Mineral em todo o Brasil, garantindo qualidade e durabilidade.",
+    icon: Grid,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Piso Elevado",
+    description: "Piso Elevado é a suspensão e alinhamento do piso com a finalidade de manuseio acessível. Sobre ele também há a locomoção de pessoas, o que exige segurança e conforto que somente a mão de obra qualificada pode oferecer.",
+    icon: Layers,
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Steel Frame",
+    description: "Sistema construtivo industrializado que utiliza perfis de aço galvanizado formados a frio. Oferece rapidez na construção, precisão dimensional e sustentabilidade.",
+    icon: Home,
+    image: "https://images.unsplash.com/photo-1503594384566-461fe158e797?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Drywall",
+    description: "Milhões de m² de Drywall instalados no Brasil contam nossa história na construção civil. Temos uma longa história de sucesso marcada por confiabilidade e seriedade.",
+    icon: Hammer,
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+  }
+];
 
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const [entry] = entries;
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fadeIn');
-        const cards = document.querySelectorAll('.service-card');
-        cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add('animate-fadeIn');
-            card.classList.remove('opacity-0');
-          }, index * 100);
-        });
-      }
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeIn');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  return <section className="py-16 construction-gradient w-full" id="services">
-      <div className="container mx-auto" ref={sectionRef}>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block py-2 px-4 rounded-full text-sm font-medium bg-yellow-500 text-construction-900 mb-4">
-            Nossos Serviços
-          </span>
-          <h2 className="heading-lg mb-4">
-            Soluções completas em <span className="text-gradient">construção civil</span>
+
+  return (
+    <section className="py-20 bg-white" id="servicos">
+      <div className="container mx-auto px-4" ref={sectionRef}>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Nossos <span className="text-green-600">Serviços</span>
           </h2>
-          <p className="subtitle">
-            Oferecemos serviços especializados em construção e reforma para projetos residenciais,
-            comerciais e industriais com qualidade garantida.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Fornecimento e instalação de produtos metálicos para construção civil 
+            com foco na sustentabilidade e qualidade.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {services.map((service, index) => <div key={index} className={cn("service-card p-6 rounded-xl transition-all duration-300 opacity-0", "bg-white border border-construction-200 hover:border-blue-300", "hover:shadow-lg hover:-translate-y-1 flex flex-col items-start")}>
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-5">
-                <service.icon className="w-7 h-7 text-blue-700" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-green-600/20 group-hover:bg-green-600/30 transition-colors duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <service.icon className="w-6 h-6 text-green-600" />
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-construction-900 mb-3">{service.title}</h3>
-              <p className="text-construction-600 mb-4 flex-grow">{service.description}</p>
-              <Link to="/services" className="mt-auto">
-                <Button variant="link" className="p-0 h-auto text-blue-700 hover:text-blue-800">
-                  Saiba mais
-                </Button>
-              </Link>
-            </div>)}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        
-        <div className="text-center mt-8">
-          <Link to="/services">
-            <Button variant="outline" size="lg" className="rounded-full border-blue-600 text-white bg-blue-600 hover:bg-blue-700">
-              Ver todos os serviços
-            </Button>
-          </Link>
+
+        <div className="mt-16 bg-gradient-to-r from-gray-800 to-green-800 rounded-lg p-8 md:p-12 text-white text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            História de Sucesso
+          </h3>
+          <p className="text-lg md:text-xl leading-relaxed">
+            Temos uma longa história de sucesso marcada por confiabilidade, seriedade, 
+            sem jamais ter tido uma só ação judicial ou reclamação em órgãos de controle 
+            de qualidade e de defesa ao consumidor.
+          </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;

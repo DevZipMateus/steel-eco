@@ -1,10 +1,11 @@
 
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import TeamSection from "@/components/TeamSection";
+import ServicesSection from "@/components/ServicesSection";
+import PartnersSection from "@/components/PartnersSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import LocationSection from "@/components/LocationSection";
 import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,28 +13,31 @@ import FloatingButton from "@/components/FloatingButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black w-full overflow-x-hidden">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden">
       <Header />
       <main className="w-full">
-        <div id="hero" className="w-full">
+        <div id="inicio" className="w-full">
           <HeroSection />
         </div>
-        <div id="services" className="w-full">
-          <ServicesSection />
-        </div>
-        <div id="about" className="w-full">
+        <div id="sobre" className="w-full">
           <AboutSection />
         </div>
-        <div id="projects" className="w-full">
+        <div id="servicos" className="w-full">
+          <ServicesSection />
+        </div>
+        <div id="parceiros" className="w-full">
+          <PartnersSection />
+        </div>
+        <div id="projetos" className="w-full">
           <ProjectsSection />
         </div>
-        <div id="team" className="w-full">
-          <TeamSection />
-        </div>
-        <div id="testimonials" className="w-full">
+        <div id="depoimentos" className="w-full">
           <TestimonialsSection />
         </div>
-        <div id="contact" className="w-full">
+        <div id="localizacao" className="w-full">
+          <LocationSection />
+        </div>
+        <div id="contato" className="w-full">
           <ContactForm />
         </div>
       </main>
