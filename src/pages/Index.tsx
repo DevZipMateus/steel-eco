@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import PartnersSection from "@/components/PartnersSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import OtherWorksSection from "@/components/OtherWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationSection from "@/components/LocationSection";
 import ContactForm from "@/components/ContactForm";
@@ -30,6 +31,9 @@ const Index = () => {
         </div>
         <div id="projetos" className="w-full">
           <ProjectsSection />
+        </div>
+        <div id="outras-obras" className="w-full">
+          <OtherWorksSection />
         </div>
         <div id="depoimentos" className="w-full">
           <TestimonialsSection />
