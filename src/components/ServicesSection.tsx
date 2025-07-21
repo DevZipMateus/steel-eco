@@ -7,37 +7,37 @@ const services = [
     title: "Brises",
     description: "Constantemente inovando em tecnologias, equipamentos, logística, segurança e treinamento de equipes, a Steel Eco instala produtos para fachadas de edifícios, tendo em seu currículo as maiores e mais importantes obras de Brasília e em todo Brasil.",
     icon: Wind,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-25-08.png"
   },
   {
     title: "Fachadas",
     description: "A instalação de fachadas é sempre um desafio vencido pela competência e qualidade de mão de obra altamente especializada. A Steel Eco possui equipamentos de apoio necessários à instalação, reduzindo assim os custos de tempo e de mão de obra.",
     icon: Building,
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 13-59-04.png"
   },
   {
     title: "Fachadas Ventiladas",
     description: "Fachada Ventilada exige estrutura auxiliar perfeita, fidelidade ao projeto e às características do produto, além de mão de obra qualificada e treinada. A Steel Eco oferece técnica, conhecimento, experiência e confiabilidade.",
     icon: Grid,
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-37-17.png"
   },
   {
     title: "Forros Metálicos",
     description: "Os Forros Metálicos, cada vez mais usados por sua beleza, leveza, praticidade e mobilidade, assim como os brises e fachadas, exigem mão de obra especializada para garantir a perfeição estética e de funcionalidade.",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-38-47.png"
   },
   {
     title: "Forros Fibra Mineral",
     description: "A Steel Eco acumula a experiência de instalação de milhões de m² de Forro de Fibra Mineral em todo o Brasil, garantindo qualidade e durabilidade.",
     icon: Grid,
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-41-15.png"
   },
   {
     title: "Piso Elevado",
     description: "Piso Elevado é a suspensão e alinhamento do piso com a finalidade de manuseio acessível. Sobre ele também há a locomoção de pessoas, o que exige segurança e conforto que somente a mão de obra qualificada pode oferecer.",
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-42-42.png"
   },
   {
     title: "Steel Frame",
@@ -49,7 +49,7 @@ const services = [
     title: "Drywall",
     description: "Milhões de m² de Drywall instalados no Brasil contam nossa história na construção civil. Temos uma longa história de sucesso marcada por confiabilidade e seriedade.",
     icon: Hammer,
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-43-51.png"
   }
 ];
 
