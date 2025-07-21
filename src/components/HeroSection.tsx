@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Building2, Leaf, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -50,7 +49,7 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           <div className="mb-8 flex justify-center">
             <img 
-              src="/lovable-uploads/824c7f25-b118-414b-b132-d8d6bf41c31e.png" 
+              src="/lovable-uploads/df5c8629-6d91-40e2-9b95-ea2041f809bc.png" 
               alt="Steel Eco - Tecnologia Steel-Frame" 
               className="h-24 md:h-32 w-auto"
             />
