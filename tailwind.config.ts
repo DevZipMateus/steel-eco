@@ -66,19 +66,19 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Steel Eco brand colors - Verde e Cinza pastéis
+        // Steel Eco brand colors - Verde atualizado para #A7CD46
         green: {
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          200: "#bbf7d0",
-          300: "#86efac",
-          400: "#4ade80",
-          500: "#22c55e",
-          600: "#16a34a",
-          700: "#15803d",
-          800: "#166534",
-          900: "#14532d",
-          950: "#052e16",
+          50: "#f6fdf0",
+          100: "#e9fbdc",
+          200: "#d3f5bb",
+          300: "#b5ec8e",
+          400: "#93dd5c",
+          500: "#a7cd46",
+          600: "#8fb332",
+          700: "#6e8a29",
+          800: "#5a6e25",
+          900: "#4c5d22",
+          950: "#26340f",
         },
         gray: {
           50: "#f9fafb",
@@ -123,15 +123,15 @@ const config = {
         pulse: {
           "0%": {
             transform: "scale(1)",
-            boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.7)",
+            boxShadow: "0 0 0 0 rgba(167, 205, 70, 0.7)",
           },
           "70%": {
             transform: "scale(1.05)",
-            boxShadow: "0 0 0 10px rgba(34, 197, 94, 0)",
+            boxShadow: "0 0 0 10px rgba(167, 205, 70, 0)",
           },
           "100%": {
             transform: "scale(1)",
-            boxShadow: "0 0 0 0 rgba(34, 197, 94, 0)",
+            boxShadow: "0 0 0 0 rgba(167, 205, 70, 0)",
           },
         },
       },
