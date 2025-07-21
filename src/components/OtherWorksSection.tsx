@@ -172,12 +172,13 @@ const OtherWorksSection = () => {
             {otherWorks.map((work, index) => (
               <div
                 key={work.id}
-                className={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 ${
+                className={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 cursor-pointer ${
                   isVisible ? 'animate-fadeIn' : 'opacity-0'
                 }`}
                 style={{ animationDelay: isVisible ? `${index * 50}ms` : '0ms' }}
+                onClick={() => handleImageExpand(work)}
               >
-                <div className="relative h-48 overflow-hidden bg-gray-100">
+                <div className="relative aspect-square overflow-hidden bg-gray-100">
                   {!imageLoadStates[work.id] && (
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                       <div className="animate-pulse text-gray-500">Carregando...</div>
@@ -186,13 +187,12 @@ const OtherWorksSection = () => {
                   <img
                     src={work.image}
                     alt={work.title}
-                    className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-105 cursor-pointer ${
+                    className={`w-full h-full object-contain transition-all duration-300 group-hover:scale-105 ${
                       imageLoadStates[work.id] ? 'opacity-100' : 'opacity-0'
                     }`}
                     loading="lazy"
                     onLoad={() => handleImageLoad(work.id)}
                     onError={() => handleImageError(work.id, work.image)}
-                    onClick={() => handleImageExpand(work)}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -207,10 +207,6 @@ const OtherWorksSection = () => {
                       </button>
                     </div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2">{work.title}</h3>
-                  <p className="text-sm text-gray-600">{work.client}</p>
                 </div>
               </div>
             ))}
@@ -233,14 +229,6 @@ const OtherWorksSection = () => {
               alt={expandedImage.title}
               className="max-w-full max-h-full object-contain rounded-lg"
             />
-            <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 text-center">
-              <h3 className="text-white text-sm sm:text-xl font-bold bg-black bg-opacity-50 rounded-lg py-1 px-2 sm:py-2 sm:px-4 inline-block mb-2">
-                {expandedImage.title}
-              </h3>
-              <p className="text-white text-xs sm:text-sm bg-black bg-opacity-50 rounded-lg py-1 px-2 inline-block">
-                {expandedImage.client}
-              </p>
-            </div>
           </div>
           <div 
             className="absolute inset-0 -z-10"
