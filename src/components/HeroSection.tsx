@@ -1,5 +1,6 @@
+
 import { useEffect, useRef } from 'react';
-import { ArrowDown, Building2, Leaf, Award } from 'lucide-react';
+import { ArrowDown, Building2, Leaf, Award, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -36,12 +37,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-green-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/30 z-10"></div>
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
       
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80')"
+          backgroundImage: "url('/lovable-uploads/1144f265-797e-4a73-a76e-e2bea0d81d3e.png')"
         }}
       ></div>
 
@@ -108,6 +109,15 @@ const HeroSection = () => {
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 px-8 py-3 text-lg font-medium rounded-full"
             >
               Entre em Contato
+            </Button>
+            <Button 
+              onClick={() => window.open('https://www.instagram.com/steeleco_metalicos/', '_blank')}
+              variant="outline" 
+              size="lg" 
+              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 px-6 py-3 text-lg font-medium rounded-full flex items-center gap-2"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram
             </Button>
           </div>
         </div>
