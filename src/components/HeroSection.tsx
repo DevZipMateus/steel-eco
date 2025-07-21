@@ -1,7 +1,7 @@
-
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Building2, Leaf, Award, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -39,18 +39,16 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 z-20 text-center" ref={sectionRef}>
         <div className="max-w-5xl mx-auto">
-          <div className="mb-8 flex justify-center mt-16 md:mt-20">
-            <img src="/lovable-uploads/df5c8629-6d91-40e2-9b95-ea2041f809bc.png" alt="Steel Eco - Tecnologia Steel-Frame" className="h-24 md:h-32 w-auto" />
+          <div className="mb-4 flex justify-center mt-16 md:mt-20">
+            <img src="/lovable-uploads/df5c8629-6d91-40e2-9b95-ea2041f809bc.png" alt="Steel Eco - Tecnologia Steel-Frame" className="h-32 md:h-40 lg:h-48 w-auto" />
           </div>
           
-          
-          
-          <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-green-400 font-medium">
+          <p className="text-xl md:text-2xl lg:text-3xl mb-4 text-green-400 font-medium">
             Com certeza, em algum lugar do Brasil,<br />
             você viu uma obra executada por nós!
           </p>
           
-          <p className="text-lg md:text-xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Criada para atuar na fabricação e comercialização de metálicos para a construção civil, 
             a Steel Eco desenvolve soluções sustentáveis respeitando o meio ambiente.
           </p>
