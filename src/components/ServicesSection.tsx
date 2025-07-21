@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Building, Wind, Home, Layers, Grid, Hammer } from 'lucide-react';
 
@@ -38,12 +37,6 @@ const services = [
     description: "Piso Elevado é a suspensão e alinhamento do piso com a finalidade de manuseio acessível. Sobre ele também há a locomoção de pessoas, o que exige segurança e conforto que somente a mão de obra qualificada pode oferecer.",
     icon: Layers,
     image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-42-42.png"
-  },
-  {
-    title: "Steel Frame",
-    description: "Sistema construtivo industrializado que utiliza perfis de aço galvanizado formados a frio. Oferece rapidez na construção, precisão dimensional e sustentabilidade.",
-    icon: Home,
-    image: "https://images.unsplash.com/photo-1503594384566-461fe158e797?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
   },
   {
     title: "Drywall",
