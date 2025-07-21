@@ -62,8 +62,8 @@ const AboutSection = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Construção sustentável"
+                src="/lovable-uploads/dc497ae9-db5a-4ea0-a77a-333c66c92b01.png"
+                alt="Steel Eco - Obra em construção"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
