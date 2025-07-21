@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MessageCircle, X, Phone } from 'lucide-react';
+import { X, Phone } from 'lucide-react';
 
 const FloatingButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,11 @@ const FloatingButton = () => {
               className="flex items-center text-gray-700 hover:text-green-600 transition-colors"
             >
               <span className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                <MessageCircle className="w-4 h-4 text-white" />
+                <img 
+                  src="/lovable-uploads/db774a34-6e4e-4b59-8c0f-b48860054798.png" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4"
+                />
               </span>
               WhatsApp
             </a>
@@ -52,7 +56,11 @@ const FloatingButton = () => {
         {isOpen ? (
           <X className="w-6 h-6" />
         ) : (
-          <MessageCircle className="w-6 h-6" />
+          <img 
+            src="/lovable-uploads/db774a34-6e4e-4b59-8c0f-b48860054798.png" 
+            alt="WhatsApp" 
+            className="w-6 h-6"
+          />
         )}
       </button>
     </div>
