@@ -103,7 +103,6 @@ const ServicesSection = () => {
                   alt={service.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-green-600/20 group-hover:bg-green-600/30 transition-colors duration-300"></div>
                 <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
                     <service.icon className="w-6 h-6 text-green-600" />
