@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { CheckCircle, Target, Users, Lightbulb } from 'lucide-react';
+import { CheckCircle, Target, Users, Lightbulb, Shield, Clock } from 'lucide-react';
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -48,16 +48,16 @@ const AboutSection = () => {
                 Nossa Missão
               </h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Está estruturada para atuar em soluções para a construção civil, observando e 
-                respeitando todos os critérios de sustentabilidade, preservação dos recursos 
-                naturais, destinação e reciclagem de resíduos, certificação e normatização de 
-                todos envolvidos no processo de fabricação e construção.
+                Estamos preparados para atuar com excelência na execução de projetos na construção civil, 
+                sempre com foco na sustentabilidade e no respeito ao meio ambiente. Adotamos práticas 
+                responsáveis de preservação dos recursos naturais, além de promover a destinação correta 
+                e a reciclagem de resíduos gerados ao longo das obras.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Em constante inovação, somos estruturados para atuar em soluções de construção 
-                civil respeitando todos os critérios de sustentabilidade, preservação dos recursos 
-                naturais, destinação e reciclagem de resíduos, durante todo o processo de 
-                fabricação à construção.
+                Apostamos na inovação contínua como parte essencial do nosso trabalho. Por isso, integramos 
+                Planejamento, Projeto e Execução de forma estratégica, garantindo o uso eficiente dos recursos 
+                disponíveis. Essa abordagem permite entregas com segurança, economia, agilidade, qualidade e 
+                praticidade, assegurando alto desempenho em cada etapa do processo construtivo.
               </p>
             </div>
             <div className="relative">
@@ -76,31 +76,38 @@ const AboutSection = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-green-600" />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">Liberdade Arquitetônica</h4>
-                <p className="text-gray-600">Total liberdade arquitetônica, aliada ao planejamento, projeto e execução.</p>
-              </div>
-              <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">Qualidade</h4>
-                <p className="text-gray-600">Compromisso com a excelência em todos os processos e produtos.</p>
+                <p className="text-gray-600">Cada projeto é conduzido com excelência técnica, atenção aos detalhes e compromisso em superar expectativas.</p>
+              </div>
+              <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-green-600" />
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Segurança</h4>
+                <p className="text-gray-600">Valorizamos a segurança dos nossos colaboradores como princípio fundamental, assegurando um ambiente de trabalho seguro, eficiente e alinhado com as melhores práticas do setor.</p>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-green-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">Parcerias</h4>
-                <p className="text-gray-600">Distribuidora e parceira de empresas que apoiam a arquitetura sustentável.</p>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Respeito aos Clientes e Colaboradores</h4>
+                <p className="text-gray-600">Acreditamos que o respeito é a base de toda grande construção. Atuamos com transparência, compromisso e escuta ativa para construir relações sólidas e entregar resultados que superem expectativas.</p>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">Inovação</h4>
-                <p className="text-gray-600">Constantemente inovando em tecnologias, equipamentos e treinamento.</p>
+                <p className="text-gray-600">Buscamos soluções modernas e sustentáveis que respeitem o meio ambiente e elevem a eficiência das obras, como forma de reduzir impactos ambientais e colaborar para a construção de um futuro melhor.</p>
+              </div>
+              <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-full md:col-span-2 lg:col-span-4 max-w-md mx-auto">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-green-600" />
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">Comprometimento com Prazos</h4>
+                <p className="text-gray-600">Cumprir prazos é mais do que um compromisso, é parte da nossa identidade. Atuamos com organização, agilidade e foco para garantir entregas pontuais, sem abrir mão da excelência.</p>
               </div>
             </div>
           </div>
