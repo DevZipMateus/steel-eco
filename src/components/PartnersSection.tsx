@@ -52,8 +52,8 @@ const PartnersSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Objetivos Comuns</h3>
               <p className="text-gray-600 leading-relaxed">
-                Trabalhamos em conjunto com nossos parceiros para alcançar metas sustentáveis 
-                e entregar projetos de excelência na construção civil.
+                Junto aos nossos parceiros, transformamos metas sustentáveis em resultados concretos, 
+                entregando obras de excelência que refletem nosso compromisso com a qualidade e o futuro da construção civil.
               </p>
             </div>
             
@@ -63,8 +63,8 @@ const PartnersSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Relações Duradouras</h3>
               <p className="text-gray-600 leading-relaxed">
-                Construímos relacionamentos sólidos baseados na confiança, transparência 
-                e compromisso mútuo com a qualidade e sustentabilidade.
+                Estabelecemos parcerias duradouras baseadas na cooperação, compromisso com a sustentabilidade 
+                e rigor na qualidade da construção.
               </p>
             </div>
           </div>
@@ -74,8 +74,9 @@ const PartnersSection = () => {
               Arquitetura Sustentável
             </h3>
             <p className="text-lg md:text-xl leading-relaxed">
-              A Steel Eco é distribuidora e parceira de empresas que apoiam a arquitetura sustentável 
-              através de sua experiência e conhecimento, proporcionando conforto e favorecendo a economia de energia.
+              A Steel Eco é distribuidora e parceira de marcas comprometidas com a arquitetura sustentável. 
+              Com expertise e parcerias estratégicas, entregamos inovação, conforto e eficiência para construções 
+              que respeitam o presente e transformam o futuro.
             </p>
           </div>
         </div>
