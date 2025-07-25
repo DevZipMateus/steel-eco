@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Handshake, Target, Users } from 'lucide-react';
 
@@ -93,12 +92,12 @@ const PartnersSection = () => {
               {partnerLogos.map((logo, index) => (
                 <div 
                   key={index}
-                  className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center min-h-[120px]"
+                  className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center min-h-[120px]"
                 >
                   <img 
                     src={logo} 
                     alt={`Parceiro ${index + 1}`}
-                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-20 object-contain"
                   />
                 </div>
               ))}
