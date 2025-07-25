@@ -27,6 +27,21 @@ const PartnersSection = () => {
     };
   }, []);
 
+  const partnerLogos = [
+    '/lovable-uploads/parceiros/3A06B150746E31A08B08.jpeg',
+    '/lovable-uploads/parceiros/3A176AE0035DB4DA5450.jpeg',
+    '/lovable-uploads/parceiros/3A226D2D074373468E7E.jpeg',
+    '/lovable-uploads/parceiros/3A6AE6CB6E29226C53DC.jpeg',
+    '/lovable-uploads/parceiros/3A8DB77B48A99202CDBF.jpeg',
+    '/lovable-uploads/parceiros/3AF326B0F796F62328DF.jpeg',
+    '/lovable-uploads/parceiros/3AF8A58CE04D6CCC813D.jpeg',
+    '/lovable-uploads/parceiros/PSA.png',
+    '/lovable-uploads/parceiros/grade-metalica.jpg',
+    '/lovable-uploads/parceiros/images (1).png',
+    '/lovable-uploads/parceiros/images (2).png',
+    '/lovable-uploads/parceiros/images.png'
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-green-50 to-gray-50" id="parceiros">
       <div className="container mx-auto px-4" ref={sectionRef}>
@@ -66,6 +81,27 @@ const PartnersSection = () => {
                 Estabelecemos parcerias duradouras baseadas na cooperação, compromisso com a sustentabilidade 
                 e rigor na qualidade da construção.
               </p>
+            </div>
+          </div>
+
+          {/* Partner Logos Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+              Nossos Parceiros de Confiança
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {partnerLogos.map((logo, index) => (
+                <div 
+                  key={index}
+                  className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center min-h-[120px]"
+                >
+                  <img 
+                    src={logo} 
+                    alt={`Parceiro ${index + 1}`}
+                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
