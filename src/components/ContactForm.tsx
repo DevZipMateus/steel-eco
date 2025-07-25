@@ -97,7 +97,7 @@ const ContactForm = () => {
                       ? 'text-lg'
                       : 'text-sm sm:text-base'
                 }`}>
-                  (11) 99999-9999
+                  (61) 9 9107-6550
                 </p>
                 <p className={`text-construction-600 ${
                   isMobile 
@@ -106,7 +106,7 @@ const ContactForm = () => {
                       ? 'text-lg'
                       : 'text-sm sm:text-base'
                 }`}>
-                  (11) 3456-7890
+                  (61) 9 9212-7700
                 </p>
               </div>
               
@@ -142,7 +142,7 @@ const ContactForm = () => {
                       ? 'text-base'
                       : 'text-xs sm:text-sm md:text-base'
                 }`}>
-                  contato@construtorafortebase.com.br
+                  sheila.steeleco@gmail.com
                 </p>
                 <p className={`text-construction-600 break-all ${
                   isMobile 
@@ -151,7 +151,7 @@ const ContactForm = () => {
                       ? 'text-base'
                       : 'text-xs sm:text-sm md:text-base'
                 }`}>
-                  orcamento@construtorafortebase.com.br
+                  steelecoengenhariaecologica@gmail.com
                 </p>
               </div>
 
@@ -189,7 +189,7 @@ const ContactForm = () => {
                       ? 'text-lg'
                       : 'text-sm sm:text-base'
                 }`}>
-                  Av. Construção, 1000
+                  Setor de Inflamáveis - Chácara FP As Chagas Nº 19
                 </p>
                 <p className={`text-construction-600 ${
                   isMobile 
@@ -198,7 +198,7 @@ const ContactForm = () => {
                       ? 'text-lg'
                       : 'text-sm sm:text-base'
                 }`}>
-                  São Paulo - SP
+                  Conjunto B - Guará - Brasília - DF
                 </p>
               </div>
             </div>

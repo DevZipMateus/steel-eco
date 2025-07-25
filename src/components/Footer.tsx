@@ -86,15 +86,25 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-green-400" />
-                <a href="tel:+5561991076550" className="text-gray-300 hover:text-green-400 transition-colors">
-                  (61) 9 9107-6550
-                </a>
+                <div className="flex flex-col text-gray-300">
+                  <a href="tel:+5561991076550" className="hover:text-green-400 transition-colors">
+                    (61) 9 9107-6550
+                  </a>
+                  <a href="tel:+5561992127700" className="hover:text-green-400 transition-colors">
+                    (61) 9 9212-7700
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-green-400" />
-                <a href="mailto:sheila.steeleco@gmail.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                  sheila.steeleco@gmail.com
-                </a>
+              <div className="flex items-start space-x-3">
+                <Mail className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col text-gray-300">
+                  <a href="mailto:sheila.steeleco@gmail.com" className="hover:text-green-400 transition-colors">
+                    sheila.steeleco@gmail.com
+                  </a>
+                  <a href="mailto:steelecoengenhariaecologica@gmail.com" className="hover:text-green-400 transition-colors">
+                    steelecoengenhariaecologica@gmail.com
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Instagram className="w-5 h-5 text-green-400" />

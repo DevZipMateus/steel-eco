@@ -72,6 +72,11 @@ const LocationSection = () => {
                           (61) 9 9107-6550
                         </a>
                       </p>
+                      <p className="text-gray-600">
+                        <a href="tel:+5561992127700" className="hover:text-green-600 transition-colors">
+                          (61) 9 9212-7700
+                        </a>
+                      </p>
                     </div>
                   </div>
 
@@ -84,6 +89,11 @@ const LocationSection = () => {
                       <p className="text-gray-600">
                         <a href="mailto:sheila.steeleco@gmail.com" className="hover:text-green-600 transition-colors">
                           sheila.steeleco@gmail.com
+                        </a>
+                      </p>
+                      <p className="text-gray-600">
+                        <a href="mailto:steelecoengenhariaecologica@gmail.com" className="hover:text-green-600 transition-colors">
+                          steelecoengenhariaecologica@gmail.com
                         </a>
                       </p>
                     </div>
