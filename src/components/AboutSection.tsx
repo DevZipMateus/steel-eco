@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { CheckCircle, Target, Users, Lightbulb, Shield, Clock } from 'lucide-react';
 
@@ -79,7 +78,7 @@ const AboutSection = () => {
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">Qualidade</h4>
-                <p className="text-gray-600">Cada projeto é conduzido com excelência técnica, atenção aos detalhes e compromisso em superar expectativas.</p>
+                <p className="text-gray-600">Cada projeto é conduzido com excelência técnica, atenção aos detalhes e compromisso em superar expectativas. Esse é o centro de tudo o que fazemos, nosso maior compromisso e o que sustenta cada obra entregue com confiança e responsabilidade.</p>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
