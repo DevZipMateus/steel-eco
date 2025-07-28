@@ -1,108 +1,151 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Eye, X } from 'lucide-react';
+import { Eye, X, MapPin, Package } from 'lucide-react';
 
-const otherWorks = [
+interface OtherWork {
+  id: number;
+  title: string;
+  client: string;
+  location: string;
+  product: string;
+  image: string;
+}
+
+const otherWorks: OtherWork[] = [
   {
     id: 1,
-    title: "Valparaiso Shopping",
+    title: "Procuradoria Regional do Trabalho - 10a Região",
     client: "Construtora Vilela e Carvalho",
+    location: "Asa Norte - Brasília DF",
+    product: "Quadrobrise e Screenpanel Hunter Douglas",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-48-05.png"
   },
   {
     id: 2,
-    title: "SERPRO – Rio de Janeiro/RJ",
+    title: "SIS Swiss International Schools do Brasil Ltda",
     client: "Licitação",
+    location: "Asa Sul - Brasília DF",
+    product: "Miniwave Hunter Douglas",
     image: "/lovable-uploads/obras/3A6AE6CB6E29226C53DC.jpeg"
   },
   {
     id: 3,
-    title: "SERPRO – Brasília/DF",
+    title: "Bali Brasília Automóveis",
     client: "Licitação",
+    location: "SIA - Brasília DF",
+    product: "Forro Ecophon Mineralis - Saint-Gobain",
     image: "/lovable-uploads/obras/3EB009D069354A2CABBC54.jpeg"
   },
   {
     id: 4,
-    title: "TCU – Brasília/DF",
+    title: "Sede Administrativa da CAESB",
     client: "Licitação",
+    location: "Águas Claras - Brasília DF",
+    product: "Dry Wall e Brise Metálico Colmeia Refax",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-48.png"
   },
   {
     id: 5,
-    title: "Hospital SEPACO – São Paulo/SP",
+    title: "Hotel Brasília Palace",
     client: "FUNASA Licitação",
+    location: "Brasília DF",
+    product: "Brise Metálico AA440 Tipo Asa de Avião Refax",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-43.png"
   },
   {
     id: 6,
     title: "DSA Igreja Presbiteriana",
     client: "Contrato direto",
+    location: "Brasília DF",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/obras/3EB093F92D306762EBA979.jpeg"
   },
   {
     id: 7,
-    title: "Fórum Núcleo Bandeirante",
+    title: "Análise Planejamento",
     client: "Construtora RV",
+    location: "Brasília DF",
+    product: "Piso Elevado",
     image: "/lovable-uploads/obras/3EB0B1F1248618B5711F85.jpeg"
   },
   {
     id: 8,
-    title: "Galeão Terminal I",
+    title: "Tribunal Regional do Trabalho",
     client: "Construtora Paulo Octavio",
+    location: "Cuiabá MT",
+    product: "Dry Wall, Forro Mineral",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-25.png"
   },
   {
     id: 9,
-    title: "Aeroporto de Recife",
+    title: "Centro de Convenções Ulisses Guimarães",
     client: "Licitação",
+    location: "Brasília DF",
+    product: "Revestimento Metálico Modular Clip-In Refax",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-21.png"
   },
   {
     id: 10,
-    title: "POUPEX",
+    title: "Mercadão Goiano",
     client: "Construtora Paulo Octavio",
+    location: "Águas Lindas GO",
+    product: "Chapa Expandida Permetal",
     image: "/lovable-uploads/obras/5E34C0F9F3FCC6CCD4B3.jpeg"
   },
   {
     id: 11,
-    title: "ETEC – Bragança Paulista/SP",
+    title: "ETEC Carrão",
     client: "Engetal Engenharia",
+    location: "São Paulo SP",
+    product: "Screenpanel Hunter Douglas",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-04.png"
   },
   {
     id: 12,
     title: "ETEC – Cruzeiro/SP",
     client: "Construtora SLT",
+    location: "Cruzeiro SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-46-58.png"
   },
   {
     id: 13,
     title: "ETEC – Ribeirão Preto/SP",
     client: "Engetal Engenharia",
+    location: "Ribeirão Preto SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-46-51.png"
   },
   {
     id: 14,
     title: "ETEC – Butantã/SP",
     client: "Engetal Engenharia",
+    location: "Butantã SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/obras/5E72D3A70F9195154392.jpeg"
   },
   {
     id: 15,
     title: "ETEC – Butantã/SP",
     client: "Engetal Engenharia",
+    location: "Butantã SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/obras/5E767A4295C5C948CC66.jpeg"
   },
   {
     id: 16,
     title: "ETEC – Butantã/SP",
     client: "Engetal Engenharia",
+    location: "Butantã SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/obras/5EA2039F7F295CB18566.jpeg"
   },
   {
     id: 17,
     title: "ETEC – Butantã/SP",
     client: "Engetal Engenharia",
+    location: "Butantã SP",
+    product: "Serviços de Construção",
     image: "/lovable-uploads/obras/5EF21554C981C836DBC8.jpeg"
   },  
 ];
@@ -110,7 +153,7 @@ const otherWorks = [
 const OtherWorksSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageLoadStates, setImageLoadStates] = useState<Record<number, boolean>>({});
-  const [expandedImage, setExpandedImage] = useState<{id: number, src: string, title: string, client: string} | null>(null);
+  const [expandedImage, setExpandedImage] = useState<OtherWork | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -147,9 +190,9 @@ const OtherWorksSection = () => {
     console.error(`Failed to load image for work ${workId}:`, imageUrl);
   };
 
-  const handleImageExpand = (work: {id: number, image: string, title: string, client: string}) => {
+  const handleImageExpand = (work: OtherWork) => {
     console.log(`Expanding image for work ${work.id}`);
-    setExpandedImage({id: work.id, src: work.image, title: work.title, client: work.client});
+    setExpandedImage(work);
   };
 
   const handleCloseExpanded = () => {
@@ -232,21 +275,40 @@ const OtherWorksSection = () => {
         </div>
       </section>
 
-      {/* Image Modal */}
+      {/* Enhanced Image Modal */}
       {expandedImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-2 sm:p-4">
-          <div className="relative w-full h-full max-w-7xl max-h-full flex items-center justify-center">
+          <div className="relative w-full h-full max-w-7xl max-h-full flex flex-col">
             <button
               onClick={handleCloseExpanded}
               className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white transition-all duration-200"
             >
               <X className="w-4 h-4 sm:w-6 sm:h-6" />
             </button>
-            <img
-              src={expandedImage.src}
-              alt={expandedImage.title}
-              className="max-w-full max-h-full object-contain rounded-lg"
-            />
+            
+            <div className="flex-1 flex items-center justify-center">
+              <img
+                src={expandedImage.image}
+                alt={expandedImage.title}
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
+            </div>
+            
+            <div className="bg-black bg-opacity-60 backdrop-blur-sm rounded-lg p-4 sm:p-6 mt-4 mx-2 sm:mx-0">
+              <h3 className="text-white text-lg sm:text-2xl font-bold mb-2">
+                {expandedImage.title}
+              </h3>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-white text-sm sm:text-base">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span>{expandedImage.location}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Package className="w-4 h-4 text-blue-400" />
+                  <span>{expandedImage.product}</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div 
             className="absolute inset-0 -z-10"
