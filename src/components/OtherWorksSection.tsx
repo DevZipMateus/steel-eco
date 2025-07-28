@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Eye, X, MapPin, Package } from 'lucide-react';
 
@@ -53,10 +54,10 @@ const otherWorks: OtherWork[] = [
   },
   {
     id: 6,
-    title: "DSA Igreja Presbiteriana",
+    title: "Tribunal de Contas da União - TCU",
     client: "Contrato direto",
     location: "Brasília DF",
-    product: "Serviços de Construção",
+    product: "Brise Metálico Tipo Asa de Avião",
     image: "/lovable-uploads/obras/3EB093F92D306762EBA979.jpeg"
   },
   {
@@ -101,50 +102,50 @@ const otherWorks: OtherWork[] = [
   },
   {
     id: 12,
-    title: "ETEC – Cruzeiro/SP",
+    title: "Câmara Legislativa do DF",
     client: "Construtora SLT",
-    location: "Cruzeiro SP",
-    product: "Serviços de Construção",
+    location: "Brasília DF",
+    product: "Forro Fibra Mineral e Quadrobrise Hunter Douglas",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-46-58.png"
   },
   {
     id: 13,
-    title: "ETEC – Ribeirão Preto/SP",
+    title: "Shopping Conjunto Nacional",
     client: "Engetal Engenharia",
-    location: "Ribeirão Preto SP",
-    product: "Serviços de Construção",
+    location: "Brasília DF",
+    product: "Painel 84R Hunter Douglas",
     image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-46-51.png"
   },
   {
     id: 14,
-    title: "ETEC – Butantã/SP",
+    title: "ETEC Raposo Tavares",
     client: "Engetal Engenharia",
-    location: "Butantã SP",
-    product: "Serviços de Construção",
+    location: "Butantã - São Paulo SP",
+    product: "Termobrise 335 Hunter Douglas",
     image: "/lovable-uploads/obras/5E72D3A70F9195154392.jpeg"
   },
   {
     id: 15,
-    title: "ETEC – Butantã/SP",
+    title: "Casa da Democracia",
     client: "Engetal Engenharia",
-    location: "Butantã SP",
-    product: "Serviços de Construção",
+    location: "Cuiabá MT",
+    product: "Brise Metálico AS288 Refax",
     image: "/lovable-uploads/obras/5E767A4295C5C948CC66.jpeg"
   },
   {
     id: 16,
-    title: "ETEC – Butantã/SP",
+    title: "Sede da OAB - PB",
     client: "Engetal Engenharia",
-    location: "Butantã SP",
-    product: "Serviços de Construção",
+    location: "João Pessoa PB",
+    product: "Chapa Expandida Permetal",
     image: "/lovable-uploads/obras/5EA2039F7F295CB18566.jpeg"
   },
   {
     id: 17,
-    title: "ETEC – Butantã/SP",
+    title: "ETEC Jaraguá",
     client: "Engetal Engenharia",
-    location: "Butantã SP",
-    product: "Serviços de Construção",
+    location: "Jaraguá - São Paulo SP",
+    product: "Brise Termobrise 335 Hunter Douglas",
     image: "/lovable-uploads/obras/5EF21554C981C836DBC8.jpeg"
   }
 ];
@@ -155,8 +156,8 @@ const OtherWorksSection = () => {
   const [expandedImage, setExpandedImage] = useState<OtherWork | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // IDs that should display complete information
-  const idsWithCompleteInfo = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
+  // IDs that should display complete information - now including all images
+  const idsWithCompleteInfo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
   const shouldShowInfo = (id: number) => {
     return idsWithCompleteInfo.includes(id);
