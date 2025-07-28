@@ -13,13 +13,13 @@ const otherWorks = [
     id: 2,
     title: "SERPRO – Rio de Janeiro/RJ",
     client: "Licitação",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-58.png"
+    image: "/lovable-uploads/obras/3A6AE6CB6E29226C53DC.jpeg"
   },
   {
     id: 3,
     title: "SERPRO – Brasília/DF",
     client: "Licitação",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-53.png"
+    image: "/lovable-uploads/obras/3EB009D069354A2CABBC54.jpeg"
   },
   {
     id: 4,
@@ -37,13 +37,13 @@ const otherWorks = [
     id: 6,
     title: "DSA Igreja Presbiteriana",
     client: "Contrato direto",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-38.png"
+    image: "/lovable-uploads/obras/3EB093F92D306762EBA979.jpeg"
   },
   {
     id: 7,
     title: "Fórum Núcleo Bandeirante",
     client: "Construtora RV",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-32.png"
+    image: "/lovable-uploads/obras/3EB0B1F1248618B5711F85.jpeg"
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const otherWorks = [
     id: 10,
     title: "POUPEX",
     client: "Construtora Paulo Octavio",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-47-15.png"
+    image: "/lovable-uploads/obras/5E34C0F9F3FCC6CCD4B3.jpeg"
   },
   {
     id: 11,
@@ -85,8 +85,26 @@ const otherWorks = [
     id: 14,
     title: "ETEC – Butantã/SP",
     client: "Engetal Engenharia",
-    image: "/lovable-uploads/Obras/Captura de tela de 2025-07-21 14-46-38.png"
-  }
+    image: "/lovable-uploads/obras/5E72D3A70F9195154392.jpeg"
+  },
+  {
+    id: 15,
+    title: "ETEC – Butantã/SP",
+    client: "Engetal Engenharia",
+    image: "/lovable-uploads/obras/5E767A4295C5C948CC66.jpeg"
+  },
+  {
+    id: 16,
+    title: "ETEC – Butantã/SP",
+    client: "Engetal Engenharia",
+    image: "/lovable-uploads/obras/5EA2039F7F295CB18566.jpeg"
+  },
+  {
+    id: 17,
+    title: "ETEC – Butantã/SP",
+    client: "Engetal Engenharia",
+    image: "/lovable-uploads/obras/5EF21554C981C836DBC8.jpeg"
+  },  
 ];
 
 const OtherWorksSection = () => {
