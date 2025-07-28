@@ -30,6 +30,7 @@ const PartnersSection = () => {
     '/lovable-uploads/parceiros/3A06B150746E31A08B08.jpeg',
     '/lovable-uploads/parceiros/3A176AE0035DB4DA5450.jpeg',
     '/lovable-uploads/parceiros/3A226D2D074373468E7E.jpeg',
+    '/lovable-uploads/parceiros/3A3CB9607EF0F0BDAAB0.jpeg',
     '/lovable-uploads/parceiros/3A6AE6CB6E29226C53DC.jpeg',
     '/lovable-uploads/parceiros/3A8DB77B48A99202CDBF.jpeg',
     '/lovable-uploads/parceiros/3AF326B0F796F62328DF.jpeg',
