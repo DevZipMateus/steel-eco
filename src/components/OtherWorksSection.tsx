@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Eye, X, MapPin, Package } from 'lucide-react';
 
@@ -147,7 +146,7 @@ const otherWorks: OtherWork[] = [
     location: "Butantã SP",
     product: "Serviços de Construção",
     image: "/lovable-uploads/obras/5EF21554C981C836DBC8.jpeg"
-  },  
+  }
 ];
 
 const OtherWorksSection = () => {
@@ -155,6 +154,13 @@ const OtherWorksSection = () => {
   const [imageLoadStates, setImageLoadStates] = useState<Record<number, boolean>>({});
   const [expandedImage, setExpandedImage] = useState<OtherWork | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  // IDs that should display complete information
+  const idsWithCompleteInfo = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
+
+  const shouldShowInfo = (id: number) => {
+    return idsWithCompleteInfo.includes(id);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -294,21 +300,24 @@ const OtherWorksSection = () => {
               />
             </div>
             
-            <div className="bg-black bg-opacity-60 backdrop-blur-sm rounded-lg p-4 sm:p-6 mt-4 mx-2 sm:mx-0">
-              <h3 className="text-white text-lg sm:text-2xl font-bold mb-2">
-                {expandedImage.title}
-              </h3>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-white text-sm sm:text-base">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span>{expandedImage.location}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Package className="w-4 h-4 text-blue-400" />
-                  <span>{expandedImage.product}</span>
+            {/* Conditionally render info bar only for images with complete information */}
+            {shouldShowInfo(expandedImage.id) && (
+              <div className="bg-black bg-opacity-60 backdrop-blur-sm rounded-lg p-4 sm:p-6 mt-4 mx-2 sm:mx-0">
+                <h3 className="text-white text-lg sm:text-2xl font-bold mb-2">
+                  {expandedImage.title}
+                </h3>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-white text-sm sm:text-base">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-green-400" />
+                    <span>{expandedImage.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Package className="w-4 h-4 text-blue-400" />
+                    <span>{expandedImage.product}</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <div 
             className="absolute inset-0 -z-10"
