@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Mail, Phone, Instagram } from 'lucide-react';
@@ -18,7 +19,7 @@ const Header = () => {
         setIsScrolled(false);
       }
       
-      const sections = ['inicio', 'sobre', 'servicos', 'parceiros', 'projetos', 'depoimentos', 'localizacao', 'contato'];
+      const sections = ['inicio', 'sobre', 'servicos', 'parceiros', 'outras-obras', 'depoimentos', 'localizacao', 'contato'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -100,7 +101,7 @@ const Header = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('projetos')} className={`text-sm font-medium ${getLinkColor('projetos')} transition-colors duration-300`}>
+                <button onClick={() => scrollToSection('outras-obras')} className={`text-sm font-medium ${getLinkColor('outras-obras')} transition-colors duration-300`}>
                   Projetos
                 </button>
               </li>
@@ -158,7 +159,7 @@ const Header = () => {
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('projetos')} className="text-lg font-medium text-gray-700 hover:text-green-600 block py-2 transition-colors w-full text-left bg-white">
+                  <button onClick={() => scrollToSection('outras-obras')} className="text-lg font-medium text-gray-700 hover:text-green-600 block py-2 transition-colors w-full text-left bg-white">
                     Projetos
                   </button>
                 </li>
