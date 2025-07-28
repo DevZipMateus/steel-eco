@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Eye, X, MapPin, Package } from 'lucide-react';
 
@@ -236,15 +235,14 @@ const OtherWorksSection = () => {
           </div>
 
           {/* Works Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherWorks.map((work, index) => (
               <div
                 key={work.id}
-                className={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 cursor-pointer ${
+                className={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 ${
                   isVisible ? 'animate-fadeIn' : 'opacity-0'
                 }`}
                 style={{ animationDelay: isVisible ? `${index * 50}ms` : '0ms' }}
-                onClick={() => handleImageExpand(work)}
               >
                 <div className="relative aspect-square overflow-hidden bg-gray-100">
                   {!imageLoadStates[work.id] && (
@@ -273,6 +271,23 @@ const OtherWorksSection = () => {
                       >
                         <Eye className="w-5 h-5" />
                       </button>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Project Information */}
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
+                    {work.title}
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <MapPin className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span className="line-clamp-1">{work.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <Package className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span className="line-clamp-2">{work.product}</span>
                     </div>
                   </div>
                 </div>
