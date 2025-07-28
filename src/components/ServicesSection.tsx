@@ -1,5 +1,6 @@
+
 import { useEffect, useRef } from 'react';
-import { Building, Wind, Home, Layers, Grid, Hammer } from 'lucide-react';
+import { Building, Wind, Home, Layers, Grid, Hammer, Wrench } from 'lucide-react';
 
 const services = [
   {
@@ -43,6 +44,12 @@ const services = [
     description: "Milhões de m² de Drywall instalados no Brasil contam nossa história na construção civil. Temos uma longa história de sucesso marcada por confiabilidade e seriedade.",
     icon: Hammer,
     image: "/lovable-uploads/produtos/Captura de tela de 2025-07-21 14-43-51.png"
+  },
+  {
+    title: "Steel Frame",
+    description: "Reconhecido internacionalmente como Light Steel Frame, esse sistema construtivo moderno utiliza perfis estruturais de aço galvanizado, placas cimentícias, chapas OSB, drywall e isolantes termoacústicos em substituição à alvenaria tradicional. O resultado é uma obra mais rápida, segura e com alto desempenho, unindo qualidade, leveza e eficiência em cada etapa da construção.",
+    icon: Wrench,
+    image: "/lovable-uploads/7341f751-a1d3-41a8-b6d8-3e8469b7f908.png"
   }
 ];
 
