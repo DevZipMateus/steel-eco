@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import PartnersSection from "@/components/PartnersSection";
 import OtherWorksSection from "@/components/OtherWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ClientThankYouSection from "@/components/ClientThankYouSection";
 import LocationSection from "@/components/LocationSection";
 import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
@@ -33,6 +34,9 @@ const Index = () => {
         </div>
         <div id="depoimentos" className="w-full">
           <TestimonialsSection />
+        </div>
+        <div id="agradecimentos" className="w-full">
+          <ClientThankYouSection />
         </div>
         <div id="localizacao" className="w-full">
           <LocationSection />
